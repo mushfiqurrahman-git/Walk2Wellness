@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -8,6 +9,7 @@ pluginManagement {
             }
         }
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
         gradlePluginPortal()
     }
 }
@@ -16,9 +18,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+
     }
 }
 
 rootProject.name = "Walk2Wellness"
 include(":app")
- 
+include(":walk2wellness")
